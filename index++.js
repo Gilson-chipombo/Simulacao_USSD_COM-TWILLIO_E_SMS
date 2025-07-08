@@ -19,6 +19,10 @@ const campaigns = [
   { title: "Palestra comunitária", location: "Cazenga" },
 ];
 
+app.get("/", async(req, res) =>{
+  res.status(200).send("Gilson, Servidor está online");
+});
+
 app.post("/sms", async (req, res) => {
   const phone = req.body.From;
   const incomingMsg = req.body.Body.trim();
